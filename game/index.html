@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palm Havoc — Marisol Bay</title>
+  <meta name="description" content="Palm Havoc: an open-world crime game in Marisol Bay, built from static files with no network and no audio assets.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="src/hud.css">
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <div id="hud">
+    <div id="area-badge"><span class="dot"></span><span id="area-name">Coral Heights</span></div>
+    <div id="wordmark">Palm&nbsp;Havoc</div>
+    <div id="objective"></div>
+
+    <div id="cash-badge"><span class="cash-label">Cash</span><span id="cash-value">$1,200</span></div>
+
+    <div id="wanted" aria-label="Wanted level">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+
+    <div id="mission-card">
+      <p class="mission-eyebrow">Job</p>
+      <h2 id="mission-title">Curb Service</h2>
+      <p id="mission-brief"></p>
+    </div>
+
+    <div id="subtitle">
+      <span id="subtitle-speaker">SAL</span>
+      <span id="subtitle-line"></span>
+    </div>
+
+    <div id="toast"></div>
+
+    <div id="hud-strip">
+      <div class="meter">
+        <span class="meter-label">Health</span>
+        <div class="meter-track"><span id="health-fill"></span></div>
+      </div>
+      <div class="strip-divider"></div>
+      <div id="weapon-name">Pistol<span id="ammo-value">12</span></div>
+      <div class="strip-divider"></div>
+      <div id="mode-value">On foot</div>
+    </div>
+
+    <!-- Contextual prompt: it appears when it can help and fades when it cannot. -->
+    <div id="prompt"><span id="prompt-key">E</span><span id="prompt-text"></span></div>
+
+    <div id="minimap-frame">
+      <canvas id="minimap" width="192" height="192"></canvas>
+      <span class="compass">N</span>
+    </div>
+  </div>
+
+  <div id="pause">
+    <div class="pause-card">
+      <p class="eyebrow">Paused &middot; Marisol Bay</p>
+      <h2>Controls</h2>
+      <div class="pause-grid">
+        <div><b>W A S D</b><span>walk, and drive once you are in a car</span></div>
+        <div><b>Mouse</b><span>look around</span></div>
+        <div><b>Shift</b><span>sprint on foot</span></div>
+        <div><b>E</b><span>steal the nearest car, or step out</span></div>
+        <div><b>F</b><span>fire &mdash; hold the mouse button to keep firing</span></div>
+        <div><b>R</b><span>reload</span></div>
+        <div><b>Space</b><span>handbrake</span></div>
+        <div><b>H</b><span>horn</span></div>
+        <div><b>Tab</b><span>this card</span></div>
+        <div><b>Esc</b><span>free the mouse</span></div>
+      </div>
+      <p class="pause-foot">Tab or click to get back to the street</p>
+    </div>
+  </div>
+
+  <div id="intro">
+    <div class="intro-card">
+      <p class="eyebrow" id="intro-eyebrow">Marisol Bay &middot; Chapter Two</p>
+      <h2>PalmHavoc.</h2>
+      <p class="intro-speaker" id="intro-speaker">SAL</p>
+      <p class="intro-line" id="intro-line"></p>
+      <button id="intro-hint">Click or press Enter</button>
+    </div>
+  </div>
+
+  <div id="boot">
+    <div class="boot-card">
+      <p class="eyebrow">Marisol Bay &middot; Chapter Two</p>
+      <h1>Palm<br>Havoc</h1>
+      <p class="tagline">Sun, salt and a debt that will not settle itself.</p>
+
+      <div class="boot-row">
+        <button id="start-button" disabled>Laying the boulevards&hellip;</button>
+        <div class="boot-note">Everything you see and hear is built in your browser.<br>No download, no network, no audio files.</div>
+      </div>
+
+      <ul class="keys">
+        <li><b>W A S D</b> walk, and drive</li>
+        <li><b>Mouse</b> look around</li>
+        <li><b>Shift</b> sprint</li>
+        <li><b>E</b> steal or leave any car</li>
+        <li><b>F</b> fire &middot; <b>R</b> reload</li>
+        <li><b>Space</b> handbrake</li>
+        <li><b>Tab</b> controls</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "palm-havoc",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Palm Havoc \u2014 an original open-world crime game for the browser (traffic, pedestrians, police, missions), built for make.fun gta6-01.",
+  "scripts": {
+    "serve": "node serve.ts",
+    "capture": "python3 tools/capture.py",
+    "verify": "python3 tools/verify.py",
+    "check": "python3 tools/check_gate.py"
+  }
+}
